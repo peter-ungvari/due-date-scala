@@ -25,7 +25,7 @@ class DueDateCalculatorTests extends FunSuite {
 
   test("2016-09-09 2PM + 7 days 4 hours = 2016-09-19 10AM") {
     val submitDate = LocalDateTime.of(2016, 9, 9, 14, 0)
-    val dueDate = DueDateCalculator.calculateDueDate(submitDate, Duration.ofHours(24 * 7 + 4))
+    val dueDate = DueDateCalculator.calculateDueDate(submitDate, Duration.ofHours(8 * 5 + 4))
     assert(LocalDateTime.of(2016, 9, 19, 10, 0) == dueDate)
   }
 
