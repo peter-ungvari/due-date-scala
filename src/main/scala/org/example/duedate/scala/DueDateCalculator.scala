@@ -5,7 +5,7 @@ import java.time._
 object DueDateCalculator {
 
   def calculateDueDate(submitDate: LocalDateTime, turnAround: Duration): LocalDateTime = {
-    submitDate
+    submitDate.plus(turnAround)
   }
 
 }

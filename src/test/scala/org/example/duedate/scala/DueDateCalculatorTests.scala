@@ -11,4 +11,10 @@ class DueDateCalculatorTests extends FunSuite {
     assert(dueDate.isAfter(submitDate))
   }
 
+  test("dueDate is from 9AM to 5PM") {
+    val submitDate = LocalDateTime.of(2016, 9, 7, 16, 0)
+    val dueDate = DueDateCalculator.calculateDueDate(submitDate, Duration.ofHours(2))
+    assert(10 === dueDate.getHour)
+  }
+
 }
