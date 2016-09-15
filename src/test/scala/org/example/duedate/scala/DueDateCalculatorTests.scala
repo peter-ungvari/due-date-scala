@@ -8,8 +8,8 @@ class DueDateCalculatorTests extends FunSuite {
   def testCalculateDueDate(submitDate: LocalDateTime,
                            hours: Int,
                            condition: (LocalDateTime) => Boolean): Unit = {
-      val dueDate = DueDateCalculator.calculateDueDate(submitDate, Duration ofHours hours)
-      assert(condition(dueDate))
+    val dueDate = DueDateCalculator.calculateDueDate(submitDate, Duration ofHours hours)
+    assert(condition(dueDate))
   }
 
   test("dueDate is greater than submitDate") {

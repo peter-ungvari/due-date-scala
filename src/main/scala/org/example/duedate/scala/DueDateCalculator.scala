@@ -9,7 +9,7 @@ object DueDateCalculator {
     val endOfDay: LocalDateTime = submitDate withHour 17
     val secondsTilEndOfDay = submitDate.until(endOfDay, ChronoUnit.SECONDS)
 
-    if(turnAround.minusSeconds(secondsTilEndOfDay).isNegative)
+    if (turnAround.minusSeconds(secondsTilEndOfDay).isNegative)
       submitDate plus turnAround
     else
       calculateDueDate(nextWeekDay9AM(submitDate), turnAround minusSeconds secondsTilEndOfDay)
